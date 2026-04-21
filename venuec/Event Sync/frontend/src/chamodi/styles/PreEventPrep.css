@@ -1,0 +1,136 @@
+.pep__empty {
+  padding: 3rem 1.5rem;
+}
+
+.pep-card {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.pep-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: linear-gradient(180deg, #f0f9ff 0%, #fff 100%);
+  border-bottom: 1px solid var(--es-border);
+}
+
+.pep-card__title {
+  margin: 0 0 0.25rem;
+  font-family: var(--es-font-serif);
+  font-size: 1.1rem;
+}
+
+.pep-card__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--es-text-muted);
+}
+
+.pep-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+  white-space: nowrap;
+}
+
+.pep-checklist__title {
+  margin: 0 1.25rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--es-accent, #e07a5f);
+}
+
+.pep-checklist {
+  padding: 0.5rem 1.25rem 1rem;
+}
+
+.pep-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 0.65rem;
+  align-items: start;
+  padding: 0.75rem 0.85rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--es-radius-lg);
+  border: 1px solid var(--es-border);
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #fff;
+}
+
+.pep-item--done {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.pep-item--pending {
+  background: #fff;
+  border-color: #e5e7eb;
+}
+
+.pep-item:last-child {
+  border-bottom: none;
+}
+
+.pep-item input {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
+}
+
+.pep-item__text--done {
+  text-decoration: line-through;
+  color: var(--es-text-muted);
+}
+
+.pep-item__who {
+  font-size: 0.68rem;
+  color: #c2410c;
+  max-width: 160px;
+  text-align: right;
+}
+
+.pep-item__status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  min-width: 3.5rem;
+  text-align: right;
+}
+
+.pep-item--done .pep-item__status {
+  color: #059669;
+}
+
+.pep-item--pending .pep-item__status {
+  color: #d97706;
+}
+
+.pep-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 1rem 1.25rem;
+  background: #fafafa;
+  border-top: 1px solid var(--es-border);
+}
+
+@media (max-width: 720px) {
+  .pep-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .pep-item__who,
+  .pep-item__status {
+    grid-column: 2;
+    text-align: left;
+    max-width: none;
+  }
+}

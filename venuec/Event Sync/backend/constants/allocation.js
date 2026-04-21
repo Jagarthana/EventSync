@@ -1,0 +1,20 @@
+module.exports = {
+  STATUSES: ['pending_venue', 'approved', 'rejected', 'released'],
+  UPDATE_FIELDS: [
+    'venueId',
+    'venueName',
+    'eventName',
+    'date',
+    'endDate',
+    'startTime',
+    'endTime',
+    'status',
+    'priority',
+    'participants',
+    'studentEmail',
+    'eventType',
+    'resources',
+    'internalNotes',
+    'requestedAt',
+  ],
+};

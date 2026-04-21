@@ -1,0 +1,13 @@
+# Local MongoDB — run from this folder: docker compose up -d
+# Then: npm start
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - eventsync-mongo-data:/data/db
+
+volumes:
+  eventsync-mongo-data:

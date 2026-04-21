@@ -1,0 +1,107 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  background: var(--es-bg-page, #faf9f6);
+  padding: 2rem 1rem;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--es-radius-xl, 20px);
+  box-shadow: var(--es-shadow-float, 0 8px 24px rgba(0, 0, 0, 0.06));
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--es-border, #e5e7eb);
+}
+
+.login-card h2 {
+  font-family: var(--es-font-serif, Georgia, serif);
+  margin-bottom: 0.35rem;
+  color: #111827;
+}
+
+.login-card > p {
+  margin-bottom: 1.5rem;
+  color: var(--es-text-muted, #6b7280);
+  font-size: 0.9rem;
+}
+
+.login-card .form-group {
+  margin-bottom: 1rem;
+}
+
+.login-card .form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.login-card .form-group input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--es-border, #e5e7eb);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.login-card .form-group input:focus {
+  outline: none;
+  border-color: var(--es-accent, #e07a5f);
+  box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.2);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--es-accent, #e07a5f);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: inherit;
+  margin-top: 0.25rem;
+}
+
+.btn-login:hover {
+  background: var(--es-accent-hover, #c45c42);
+}
+
+.error {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.demo-note {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--es-text-muted, #6b7280);
+  text-align: center;
+  line-height: 1.45;
+}
+
+.demo-note__link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--es-accent, #e07a5f);
+  font: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.demo-note__link:hover {
+  color: var(--es-accent-hover, #c45c42);
+}

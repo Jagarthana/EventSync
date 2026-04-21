@@ -1,0 +1,13 @@
+.ab__filters {
+  margin-bottom: 1.25rem;
+}
+
+.ab__table {
+  margin-bottom: 1rem;
+}
+
+.ab__empty-cell {
+  text-align: center;
+  color: var(--es-text-muted);
+  padding: 2rem 1rem;
+}

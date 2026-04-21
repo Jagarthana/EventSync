@@ -1,0 +1,249 @@
+/* EventSync — unified shell (reference: Governance / public pages) */
+
+:root {
+  /* Brand & surfaces (aligned with Governance mockups) */
+  --es-cream: #fef9f6;
+  --es-cream-deep: #faf5f0;
+  --es-navy: #0b2239;
+  --es-navy-mid: #153d66;
+  --es-active-bg: #e0f2fe;
+  --es-active-border: #f26522;
+  --rose: #f26522;
+  --rose-mid: #e85a1a;
+  --rose-lt: #fff0e8;
+  --rose-glow: rgba(242, 101, 34, 0.18);
+  --rose-hover: #d94e0f;
+  --rose-border: #fad3bf;
+  --bg: var(--es-cream);
+  --surface: #ffffff;
+  --surface-alt: #f3f0f5;
+  --border: #e5dcea;
+  --border-md: #d5cbdc;
+  --border-dk: #bfb0cb;
+  --text-1: #18141c;
+  --text-2: #4a3f52;
+  --text-3: #9182a0;
+  --ink: #0b2239;
+  --ink-mid: #153d66;
+  --graph: #0b2239;
+  --graph-mid: #153d66;
+  --violet: #004d99;
+  --violet-mid: #0066cc;
+  --violet-lt: #e6f0fa;
+  --violet-border: #b3d1f0;
+  --violet-glow: rgba(0, 77, 153, 0.14);
+  --em: #065f46;
+  --em-lt: #ecfdf5;
+  --em-bd: #6ee7b7;
+  --amber: #92400e;
+  --amber-lt: #fdf8f0;
+  --amber-bd: #fcd97a;
+  --red: #9f1239;
+  --red-lt: #fff1f2;
+  --red-bd: #fda4af;
+  --teal: #0e7490;
+  --teal-lt: #ecfeff;
+  --teal-bd: #a5f3fc;
+  --r-sm: 8px;
+  --r: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --sh-xs: 0 1px 4px rgba(0, 77, 153, 0.05);
+  --sh-sm: 0 2px 12px rgba(0, 77, 153, 0.09);
+  --sh: 0 4px 24px rgba(0, 77, 153, 0.1);
+  --sh-lg: 0 8px 40px rgba(0, 77, 153, 0.13);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t: 0.18s var(--ease);
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-1);
+}
+
+/* App shell behind topbar + footer */
+#root,
+main {
+  background: var(--es-cream);
+}
+
+.page {
+  background: var(--es-cream);
+}
+
+/* Topbar — role cluster (Governance Officer / Student Affairs) */
+.topbar-user {
+  align-items: center;
+  gap: 12px 14px;
+}
+
+.topbar-user-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  min-width: 0;
+  max-width: 220px;
+}
+
+.topbar-urole {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-1, #18141c);
+  line-height: 1.2;
+}
+
+.topbar-usub {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-3, #9182a0);
+  line-height: 1.2;
+}
+
+/* Log Out — orange outline (reference) */
+.btn-logout-top {
+  color: var(--rose, #f26522);
+  border: 1.5px solid var(--rose-border, #fad3bf);
+  background: var(--rose-lt, #fff0e8);
+}
+
+.btn-logout-top:hover {
+  background: #ffe8d9;
+  border-color: var(--rose-mid, #e85a1a);
+  color: var(--rose-mid, #e85a1a);
+}
+
+/* Shared sidebar brand strip (Student / Finance / Venue) */
+.es-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 14px 12px;
+  background: linear-gradient(140deg, var(--es-navy) 0%, var(--es-navy-mid) 100%);
+  color: #fff;
+}
+
+.es-sidebar-brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--rose, #f26522) 0%, var(--rose-mid, #e85a1a) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(242, 101, 34, 0.25);
+}
+
+.es-sidebar-brand-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.es-sidebar-brand-sub {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.82;
+  margin-top: 3px;
+}
+
+/* Student dashboard — sidebar user strip + active row */
+.sidebar .sidebar-user {
+  background: linear-gradient(140deg, var(--es-navy) 0%, var(--es-navy-mid) 100%);
+}
+
+.sidebar .su-avatar {
+  background: rgba(242, 101, 34, 0.35);
+  border-color: rgba(253, 186, 116, 0.45);
+}
+
+.sidebar .su-badge {
+  background: rgba(242, 101, 34, 0.28);
+}
+
+.sidebar .su-badge-dot {
+  background: #fdba74;
+}
+
+.sidebar .snav-item.act {
+  background: var(--es-active-bg);
+  color: var(--es-navy-mid);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 0 var(--es-active-border);
+}
+
+/* Finance app — align accent with EventSync orange (scoped) */
+.fin-app {
+  --rose: #f26522;
+  --rose-mid: #e85a1a;
+  --rose-lt: #fff0e8;
+  --rose-hover: #d94e0f;
+  --rose-border: #fad3bf;
+  --rose-glow: rgba(242, 101, 34, 0.16);
+  background: var(--es-cream) !important;
+}
+
+.fin-app .fin-snav-item.act {
+  background: var(--es-active-bg);
+  color: var(--es-navy-mid);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 0 var(--es-active-border);
+}
+
+.fin-app .fin-sidebar-user {
+  background: linear-gradient(140deg, var(--es-navy) 0%, var(--es-navy-mid) 100%);
+}
+
+.fin-app .fin-su-avatar {
+  background: rgba(242, 101, 34, 0.35);
+  border-color: rgba(253, 186, 116, 0.45);
+}
+
+.fin-app .fin-su-badge {
+  background: rgba(242, 101, 34, 0.28);
+}
+
+.fin-app .fin-su-badge-dot {
+  background: #fdba74;
+}
+
+/* Venue officer — orange primary + active nav */
+.vo-app .snav-item.act {
+  background: var(--es-active-bg);
+  color: var(--es-navy-mid);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 0 var(--es-active-border);
+}
+
+.vo-app .sidebar-officer-card {
+  background: linear-gradient(140deg, var(--es-navy) 0%, var(--es-navy-mid) 100%);
+}
+
+.vo-app .soc-avatar {
+  background: rgba(242, 101, 34, 0.35);
+  border-color: rgba(253, 186, 116, 0.45);
+}
+
+.vo-app .soc-badge {
+  background: rgba(242, 101, 34, 0.28);
+}
+
+.vo-app .soc-badge-dot {
+  background: #fdba74;
+}
+
+.vo-app .es-sidebar-brand-mark {
+  background: linear-gradient(135deg, #f26522 0%, #e85a1a 100%);
+  box-shadow: 0 2px 10px rgba(242, 101, 34, 0.25);
+}
