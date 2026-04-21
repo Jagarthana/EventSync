@@ -1,0 +1,204 @@
+.officer-profile__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.officer-profile__card {
+  padding: 1.35rem 1.5rem;
+}
+
+.officer-profile__card-title {
+  font-family: var(--es-font-serif);
+  font-size: 1.2rem;
+  margin: 0 0 0.35rem;
+}
+
+.officer-profile__hint {
+  margin: 0 0 1.15rem;
+  font-size: 0.85rem;
+  color: var(--es-text-muted);
+}
+
+.officer-profile__photo-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.35rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: var(--es-radius-lg);
+  border: 1px dashed rgba(224, 122, 95, 0.45);
+  background: linear-gradient(180deg, #fdf8f5 0%, #fff 100%);
+}
+
+.officer-profile__photo-preview {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(145deg, #ea8f5c, #e8743b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(224, 122, 95, 0.25);
+}
+
+.officer-profile__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.officer-profile__photo-initials {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.officer-profile__photo-actions {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.officer-profile__file-input {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.officer-profile__upload-btn {
+  border-radius: 999px;
+}
+
+.officer-profile__photo-hint {
+  margin: 0.15rem 0 0;
+  font-size: 0.75rem;
+  color: var(--es-text-muted);
+}
+
+.officer-profile__photo-error {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #b91c1c;
+}
+
+.officer-profile__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.officer-profile__field span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--es-text-muted);
+}
+
+.officer-profile__field input {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--es-border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.officer-profile__field input:focus {
+  outline: none;
+  border-color: var(--es-accent, #e07a5f);
+  box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.2);
+}
+
+.officer-profile__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.officer-profile__saved {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--es-success, #059669);
+}
+
+.officer-profile__aside {
+  padding: 1.25rem;
+}
+
+.officer-profile__aside-title {
+  font-family: var(--es-font-serif);
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+
+.officer-profile__aside-text {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: var(--es-text-muted);
+  line-height: 1.45;
+}
+
+.officer-profile__preview {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: var(--es-radius-lg);
+  background: var(--es-accent-soft, #fdf4f0);
+  border: 1px solid rgba(224, 122, 95, 0.25);
+}
+
+.officer-profile__preview-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #fed7aa;
+}
+
+.officer-profile__preview-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ea8f5c, #e8743b);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.officer-profile__preview-meta {
+  font-size: 0.78rem;
+  color: var(--es-text-muted);
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 900px) {
+  .officer-profile__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .officer-profile__photo-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

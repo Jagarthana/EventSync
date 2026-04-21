@@ -1,0 +1,38 @@
+.im-section {
+  margin-bottom: 1.75rem;
+}
+
+.im-section__title {
+  font-family: var(--es-font-serif);
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.im-empty-cell {
+  text-align: center;
+  color: var(--es-text-muted);
+  padding: 2rem 1rem;
+}
+
+.im-muted {
+  color: var(--es-text-muted);
+  font-size: 0.75rem;
+}
+
+.im-pill {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.im-pill--open {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.im-pill--resolved {
+  background: #ecfdf5;
+  color: #059669;
+}
